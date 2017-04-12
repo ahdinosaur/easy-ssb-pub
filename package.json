@@ -38,7 +38,10 @@
     "start": "tsc && node dist/index --host $PUB_URL",
     "lint": "tslint -c tslint.json src/**/*.ts src/*.ts",
     "mocha": "mocha tests/*.ts tests/**/*.ts --require ts-node/register",
-    "test": "npm run lint && npm run mocha"
+    "test": "npm run lint && npm run mocha",
+    "docker:build": "docker build -t ahdinosaur/easy-ssb-pub .",
+    "docker:run": "docker run -it ahdinosaur/easy-ssb-pub",
+    "docker:push": "docker push ahdinosaur/easy-ssb-pub"
   },
   "engines": {
     "node": "6.9.1"
